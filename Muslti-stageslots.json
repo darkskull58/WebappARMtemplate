@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "sites_Yash83188_name": {
-            "defaultValue": "Yash831888",
+            "defaultValue": "Yash83188",
             "type": "String"
         },
         "serverfarms_ASP_prac_9884_externalid": {

@@ -14,6 +14,20 @@
     "variables": {},
     "resources": [
         {
+        "name": "ASP-prac-9884",
+        "type": "Microsoft.Web/serverfarms",
+        "apiVersion": "2020-12-01",
+        "location": "[resourceGroup().location]",
+        "sku": {
+            "name": "P1V2",
+            "capacity": 1
+        },
+        
+        "properties": {
+            "name": "ASP-prac-9884"
+        }
+      },
+        {
             "type": "Microsoft.Web/sites",
             "apiVersion": "2022-03-01",
             "name": "[parameters('sites_Yash83188_name')]",

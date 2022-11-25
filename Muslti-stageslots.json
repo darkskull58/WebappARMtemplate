@@ -7,7 +7,7 @@
             "type": "String"
         },
         "serverfarms_ASP_prac_9884_externalid": {
-            "defaultValue": "/subscriptions/c6b9c786-7711-41dc-a531-d7454bef4572/resourceGroups/prac/providers/Microsoft.Web/serverfarms/ASP-prac-9884",
+            "defaultValue": "/subscriptions/c6b9c786-7711-41dc-a531-d7454bef4572/resourceGroups/prac/providers/Microsoft.Web/serverfarms/ASP-prac-98845",
             "type": "String"
         }
     },

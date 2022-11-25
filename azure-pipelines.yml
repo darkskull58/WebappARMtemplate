@@ -12,9 +12,11 @@ pool:
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Subscription'
+    deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'Azure for Students (c6b9c786-7711-41dc-a531-d7454bef4572)'
     subscriptionId: 'c6b9c786-7711-41dc-a531-d7454bef4572'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'prac'
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: '*.json'

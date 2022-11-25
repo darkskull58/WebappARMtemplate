@@ -7,26 +7,15 @@
             "type": "String"
         },
         "serverfarms_ASP_prac_9884_externalid": {
-            "defaultValue": "/subscriptions/c6b9c786-7711-41dc-a531-d7454bef4572/resourceGroups/prac/providers/Microsoft.Web/serverfarms/appServicePlan12",
+            "defaultValue": "/subscriptions/c6b9c786-7711-41dc-a531-d7454bef4572/resourceGroups/prac/providers/Microsoft.Web/serverfarms/ASP-prac-9884",
             "type": "String"
         }
     },
     "variables": {},
     "resources": [
-      {
-        "name": "appServicePlan12",
-        "type": "Microsoft.Web/serverfarms",
-        "apiVersion": "2020-12-01",
-        "location": "[resourceGroup().location]",
-        "sku": {
-            "name": "S1",
-            "capacity": 1
-        },
+      
        
-        "properties": {
-            "name": "appServicePlan12"
-        }
-      },
+       
     
         
         {
@@ -35,7 +24,7 @@
             "name": "[parameters('sites_Yash83188_name')]",
             "location": "East US",
             "kind": "app",
-            "dependsOn": ["[resourceId('Microsoft.Web/serverfarms','appServicePlan12')]"],
+            
             "properties": {
                 "enabled": true,
                 "hostNameSslStates": [

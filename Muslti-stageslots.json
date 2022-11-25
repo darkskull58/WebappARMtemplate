@@ -39,6 +39,8 @@
                         "hostType": "Repository"
                     }
                 ],
+                "dependsOn": [
+                "[parameters('serverfarms_ASP_prac_9884_externalid')]"],
                 "serverFarmId": "[parameters('serverfarms_ASP_prac_9884_externalid')]",
                 "reserved": false,
                 "isXenon": false,

@@ -8,7 +8,10 @@ provider "azurerm" {
     features {}
   # Configuration options
 }
-resource "random_uuid" "test" {
+resource "random_integer" "test" {
+  min = 1
+  max = 50000
+  
 }
 
 resource "azurerm_resource_group" "example" {
@@ -17,7 +20,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "yashstorageaccount${random_uuid.test.result}"
+  name                     = "yashstorageaccount${random_integer.test.result}"
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"

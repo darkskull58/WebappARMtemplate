@@ -17,7 +17,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "yashstorageaccount-${random_uuid.test.result}"
+  name                     = "yashstorageaccount${random_uuid.test.result}"
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"

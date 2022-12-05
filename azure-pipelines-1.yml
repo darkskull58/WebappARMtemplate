@@ -1,0 +1,34 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: TerraformInstaller@0
+  inputs:
+    terraformVersion: 'latest'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'Azure for Students (c6b9c786-7711-41dc-a531-d7454bef4572)'
+    backendAzureRmResourceGroupName: 'terraform'
+    backendAzureRmStorageAccountName: 'terraformcicdyash'
+    backendAzureRmContainerName: 'terraform'
+    backendAzureRmKey: 'terra.tfstate'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'Azure for Students (c6b9c786-7711-41dc-a531-d7454bef4572)'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    environmentServiceNameAzureRM: 'Azure for Students (c6b9c786-7711-41dc-a531-d7454bef4572)'

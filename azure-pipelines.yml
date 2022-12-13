@@ -16,7 +16,7 @@ steps:
     azureResourceManagerConnection: 'ARConn'
     subscriptionId: '4dac56d2-d8af-42c7-9f33-548f2a10ddab'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'BasuTestNewResourceGroup'
+    resourceGroupName: 'newwebapp'
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: '*.json'

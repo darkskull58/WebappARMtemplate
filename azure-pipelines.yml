@@ -13,10 +13,10 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'newARconn'
-    subscriptionId: '4dac56d2-d8af-42c7-9f33-548f2a10ddab'
+    azureResourceManagerConnection: 'LTIM_CLOUDLAB_SUB'
+    subscriptionId: 'f83aae0f-b5dd-4ce9-8483-a007ea91312b'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'newwebapp'
+    resourceGroupName: 'sourishwebapp'
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: '*.json'

@@ -4,7 +4,7 @@
   "parameters": {
     "appServiceName": {
       "type": "string",
-      "defaultValue": "multistage",
+      "defaultValue": "sourishappservice",
       "minLength": 1
     },
     "appServiceSkuName": {
@@ -31,7 +31,7 @@
     "webAppName": {
       "type": "string",
       "minLength": 1,
-      "defaultValue": "multistage83"
+      "defaultValue": "sourishwebapp"
     },
     "stagingSlot1stName": {
       "type": "string",
